@@ -13,10 +13,12 @@ def main():
                   [15, 35, 0, 30],
                   [20, 25, 30, 0]]
 
+    population_size = 50
+    max_generation = 50
     # Initialize the evolutionary algorithm
     algo = SimpleEvolution(
         Subpopulation(creators=PermutationCreator(length=len(tspMatrix)),
-                      population_size=50,
+                      population_size=population_size,
                       # user-defined fitness evaluation method
                       evaluator=TSPEvaluator(tspMatrix),
                       # maximization problem (fitness is sum of values), so higher fitness is better
@@ -33,15 +35,17 @@ def main():
                       ]),
         breeder=SimpleBreeder(),
         max_workers=1,
-        max_generation=50,
+        max_generation=max_generation,
         statistics=BestAverageWorstStatistics()
     )
+    print("EA Process Presented Bellow:")
 
     # evolve the generated initial population
     algo.evolve()
-    # Execute (show) the best solution
-    print(algo.execute())
+    print("#####################################")
 
+    print("The Ultimate solution found by our solver is:")
+    algo.finish()
 
 if __name__ == '__main__':
     main()
