@@ -1,5 +1,5 @@
 
-# EvolvingLikePokemon
+# EvolutionTSP
 
 ## Intro
 The project handles TSP (traveling salesman) problem using Evolutionary Algorithm. To implement EA we used the EC-KitY package.
