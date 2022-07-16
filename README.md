@@ -2,7 +2,7 @@
 # EvolvingLikePokemon
 
 ## Intro
-The Mini-Project handles the TSP problem using Evolutionary Algorithm. To implement EA we used the EC-KitY package as instructed.
+The project handles the TSP problem using Evolutionary Algorithm. To implement EA we used the EC-KitY package as instructed.
 
 We chose to solve the following version of TSP problem:
 - The agent is allowed to choose stating city.
