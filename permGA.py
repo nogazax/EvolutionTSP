@@ -60,7 +60,7 @@ class PermutationMutation(GeneticOperator):
         super().__init__( arity=1, probability=swap_Probability)
         self.applied_individuals = None
 
-    def apply(self, individuals: list[Vector]):
+    def apply(self, individuals):
         for ind in individuals:
             range = ind.length
             swapping_indices = np.random.choice(range, 2, replace=False)
